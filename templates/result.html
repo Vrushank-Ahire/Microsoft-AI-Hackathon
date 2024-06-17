@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Upload Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Fake News Detection Tool</h1>
+        <nav>
+            <div class="header-right">
+                
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Text Upload Result</h1>
+        <p>Your text: {{ text }}</p>
+        <p>Number of characters: {{ letter_count }}</p>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

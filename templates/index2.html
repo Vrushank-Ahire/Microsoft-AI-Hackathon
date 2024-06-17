@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Fake News Detection Tool</h1>
+        <nav>
+            <div class="header-right">
+                
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/model">Model</a>
+            
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload CSV File</h2>
+            <form action="/upload_csv" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fileUpload">Choose CSV File:</label>
+                    <input type="file" id="fileUpload" name="fileUpload" accept=".txt">
+                </div>
+                <button type="submit">Upload CSV</button>
+            </form>
+        </div>
+        
+        <div class="upload-section">
+            <h2>Upload Text</h2>
+            <form action="/upload_text" method="post">
+                <div class="form-group">
+                    <label for="textInput">Enter Text:</label>
+                    <textarea id="textInput" name="textInput" rows="10" placeholder="Type or paste your text here..." style="font-size: 25px;"></textarea>
+                </div>
+                <button type="submit">Upload Text</button>
+            </form>
+        </div>
+        
+    </div>
+    <footer>
+        <p>Made with love by Hunter &hearts;</p>
+    </footer>
+    
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Fake News Detection Tool</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="fileUpload">Upload CSV File:</label>
+                <input type="file" id="fileUpload" name="fileUpload" accept=".csv">
+            </div>
+            <div class="form-group">
+                <label for="textInput">Enter Text:</label>
+                <textarea id="textInput" name="textInput" rows="10" placeholder="Type or paste your text here..."></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html> -->

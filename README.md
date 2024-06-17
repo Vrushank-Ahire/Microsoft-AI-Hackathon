@@ -28,8 +28,7 @@ pip install pandas torch transformers
 
 
 ## [Click here to view the colab notebook for the project ](https://colab.research.google.com/drive/1uCMhqH9UlCV-Kb8HXYjAdiu1bIwuVekH?usp=sharing)
-## [Click here to view the dataset for the project ]
-(https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets)
+## [Click here to view the dataset for the project ](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets)
 
 
 

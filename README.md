@@ -46,6 +46,12 @@ The script will load the datasets, preprocess the data, train the Discriminator 
    - The BERT model is used for text representation.
    - The code utilizes the `AutoModel` and `AutoTokenizer` from the Transformers library to load the pre-trained BERT model.
 
+   > ## **Why BERT?**
+   >
+   > **BERT is chosen because it generates contextual embeddings, unlike traditional word embedding models like Word2Vec or GloVe, which use static embeddings. Contextual understanding is crucial for accurately classifying news articles, where the same words can convey different meanings based on the context.**
+   >
+   > **Static embeddings fail to capture the nuances and subtleties of natural language, leading to potential misinterpretations and inaccuracies in fake news detection, where context is critical. BERT's contextual embeddings enable the Discriminator model to make more informed predictions about the authenticity of news content by effectively encoding contextual cues.**
+
 3. **Discriminator Model**:
    - The Discriminator model is a neural network architecture that takes the BERT representations as input and classifies the news articles as fake or real.
    - The Discriminator consists of multiple convolutional layers followed by a linear layer and a softmax activation function.
@@ -69,8 +75,6 @@ This project incorporates several advanced techniques:
 3. **Custom Loss Function**: The code implements a custom loss function that calculates the per-example loss based on the log probabilities and the true labels. This loss function is used to optimize the Discriminator model during training.
 
 4. **Optimization Techniques**: The code utilizes the Adam optimizer, which is an advanced optimization algorithm that combines the advantages of momentum and RMSProp. Additionally, techniques like dropout regularization and LeakyReLU activation functions are employed to improve the performance and prevent overfitting.
-
-5. **Data Balancing**: The code includes an option to balance the dataset by replicating the underrepresented class (either fake or real news articles). This technique helps to mitigate the effects of class imbalance and improves the performance of the classifier.
 
 ## Conclusion
 
